@@ -10,7 +10,7 @@ const envs = env<{ NODE_ENV?: string; PORT?: string }>({ env: {} } as unknown as
   Bindings: { NODE_ENV?: string; PORT?: string };
 }>);
 
-const nodeApp = new Hono().basePath(baseServer);
+const nodeApp = new Hono();
 
 nodeApp.use(compress());
 
