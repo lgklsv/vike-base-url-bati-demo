@@ -14,4 +14,5 @@ export default {
   description: "Demo showcasing Vike",
 
   extends: vikeReact,
+  baseServer: "/app/",
 } satisfies Config;

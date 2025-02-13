@@ -3,7 +3,7 @@ import { vikeHandler } from "./server/vike-handler";
 import { Hono } from "hono";
 import { createHandler } from "@universal-middleware/hono";
 
-const app = new Hono();
+const app = new Hono().basePath("/app/");
 
 app.post("/api/todo/create", createHandler(createTodoHandler)());
 
