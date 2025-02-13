@@ -2,8 +2,9 @@ import { createTodoHandler } from "./server/create-todo-handler";
 import { vikeHandler } from "./server/vike-handler";
 import { Hono } from "hono";
 import { createHandler } from "@universal-middleware/hono";
+import { baseServer } from "./base";
 
-const app = new Hono().basePath("/app/");
+const app = new Hono().basePath(baseServer);
 
 app.post("/api/todo/create", createHandler(createTodoHandler)());
 
